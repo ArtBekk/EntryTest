@@ -18,14 +18,12 @@ namespace EntryTestGL
 			}
 			else
 			{
-				Stream inputStream = Console.OpenStandardInput();
-				byte[] bytes = new byte[512];
-				int outputLength = inputStream.Read(bytes, 0, 512);
-				char[] chars = Encoding.UTF8.GetChars(bytes, 0, outputLength);
-				string input = new string(chars);
+				string input = null;
+				using (StreamReader reader = new StreamReader(Console.OpenStandardInput(), Console.InputEncoding))
+				{
+					input = reader.ReadToEnd();
+				}
 				input = input.Trim().Trim('"');
-				//input = input.Substring(1, input.Length - 2);
-				Console.Write(input + input.Length);
 				container = new List<string>(input.Split(' '));
 			}
 			//Уровень 1
