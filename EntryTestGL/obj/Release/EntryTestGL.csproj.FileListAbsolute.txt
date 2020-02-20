@@ -1,0 +1,5 @@
+C:\Users\ArtBekk\Desktop\EntryTestGL\EntryTestGL\bin\Release\EntryTestGL.exe.config
+C:\Users\ArtBekk\Desktop\EntryTestGL\EntryTestGL\bin\Release\EntryTestGL.exe
+C:\Users\ArtBekk\Desktop\EntryTestGL\EntryTestGL\bin\Release\EntryTestGL.pdb
+C:\Users\ArtBekk\Desktop\EntryTestGL\EntryTestGL\obj\Release\EntryTestGL.exe
+C:\Users\ArtBekk\Desktop\EntryTestGL\EntryTestGL\obj\Release\EntryTestGL.pdb
