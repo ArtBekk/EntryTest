@@ -11,10 +11,11 @@ namespace EntryTestGL
 	{
 		static void Main(string[] args)
 		{
-			List<string> container = new List<string>();
+			//Уровень 1 и 6
+			List<string> parsedWords = new List<string>();
 			if (args.Length != 0)
 			{
-				container = new List<string>(args);
+				parsedWords = new List<string>(args);
 			}
 			else
 			{
@@ -24,19 +25,18 @@ namespace EntryTestGL
 					input = reader.ReadToEnd();
 				}
 				input = input.Trim().Trim('"');
-				container = new List<string>(input.Split(' '));
+				parsedWords = new List<string>(input.Split(' '));
 			}
-			//Уровень 1
 			Console.WriteLine(Environment.NewLine + "Level 1: ");
-			foreach (string temp in container)
+			foreach (string temp in parsedWords)
 				Console.WriteLine(temp);
 			//Уровень 2
-			var sortedWords = container.OrderBy(i => i);
+			var sortedWords = parsedWords.OrderBy(i => i);
 			Console.WriteLine(Environment.NewLine + "Level 2, sorted alphabetically: ");
 			foreach (string temp in sortedWords)
 				Console.WriteLine(temp);
 			//Уровень 3
-			var uniqWords = container.GroupBy(i => i);
+			var uniqWords = parsedWords.GroupBy(i => i);
 			Console.WriteLine(Environment.NewLine + "Level 3, unique only: ");
 			foreach (var temp in uniqWords)
 				Console.WriteLine(temp.Key);
